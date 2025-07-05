@@ -61,7 +61,22 @@ class _ReportFormState extends State<ReportForm> {
     if (_formKey.currentState!.validate() && _image != null && _location != null) {
       _formKey.currentState!.save();
 
-      // TODO: Upload to Firebase Storage + Firestore
+      import '../services/firebase_service.dart';
+
+...
+
+final firebaseService = FirebaseService();
+
+String imageUrl = await firebaseService.uploadImage(_image!);
+
+await firebaseService.saveReport(
+  category: _category,
+  description: _description,
+  latitude: _location!.latitude,
+  longitude: _location!.longitude,
+  imageUrl: imageUrl,
+);
+
       print('Category: $_category');
       print('Description: $_description');
       print('Image Path: ${_image!.path}');
