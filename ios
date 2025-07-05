@@ -1,1 +1,6 @@
+Inside <dict>, add permissions:
+<key>NSCameraUsageDescription</key>
+<string>This app uses the camera to take issue photos.</string>
+<key>NSLocationWhenInUseUsageDescription</key>
+<string>This app needs your location to tag issue reports.</string>
 
