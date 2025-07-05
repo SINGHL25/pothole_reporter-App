@@ -1,1 +1,24 @@
 // pubspec.yaml placeholder
+name: pothole_reporter
+description: A crowdsourced traffic issue reporting app
+publish_to: 'none'
+version: 1.0.0+1
+
+environment:
+  sdk: ">=2.17.0 <4.0.0"
+
+dependencies:
+  flutter:
+    sdk: flutter
+  firebase_core: ^2.0.0
+  cloud_firestore: ^4.0.0
+  firebase_storage: ^11.0.0
+  image_picker: ^1.0.0
+  geolocator: ^9.0.2
+  google_maps_flutter: ^2.5.0
+
+flutter:
+  uses-material-design: true
+  assets:
+    - assets/images/
+
