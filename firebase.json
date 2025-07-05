@@ -1,1 +1,8 @@
 // firebase.json placeholder
+{
+  "hosting": {
+    "public": "web",
+    "ignore": ["firebase.json", "**/.*", "**/node_modules/**"]
+  }
+}
+
